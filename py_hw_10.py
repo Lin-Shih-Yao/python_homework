@@ -136,10 +136,10 @@
 # print(capitalize("tim"))
 # print(capitalize("matt"))
 
-# 17 不會
+# 17 
 # def compact(x):
-#     i = [i for i in x if i != 0 or i is True or i != "" or i != [] or i !={} or i == "All done"] 
-#     return i
+#     a = [i for i in x if i]
+#     return a
 # print(compact([0, 1, 2, "", [], False, {}, None, "All done"]))
 
 # 18
@@ -148,6 +148,86 @@
 #     return i
 # print(intersection([1, 2, 3], [2, 3, 4]))
 # print(intersection(["a", "b", "z"],["x", "y", "z"]))
+
+# 19
+# def partition(x, y):
+#     if y == "isEven":
+#         e = []
+#         o = []
+#         for i in x:
+#             if i % 2 == 0:
+#                 e.append(i)
+#             elif i % 2 != 0:
+#                 o.append(i)
+#         return [e, o]        
+#     elif y == "isOdd":
+#         e = []
+#         o = []
+#         for i in x:
+#             if i % 2 == 0:
+#                 e.append(i)
+#             elif i % 2 != 0:
+#                 o.append(i)
+#         return [o, e]
+# print(partition([1, 2, 3, 4], 'isEven'))
+
+# function advance
+# 1
+# def contain_purple(x):
+#     if "purple" in x:
+#         return True
+#     else:
+#         return False
+# print(contain_purple([25, "purple"]))
+# print(contain_purple(["green", False, "blue", "hello world"]))
+# print(contain_purple("purple"))
+# print(contain_purple(["a", 99, "blah blah blah", 1, True, False, "purple"]))
+# print(contain_purple([1, 2, 3]))
+
+# 2
+# def combine_world(x, **kwargs):
+#     if not kwargs:
+#         return x
+#     elif "prefix" in kwargs:
+#         return kwargs["prefix"] + x
+#     elif "suffix" in kwargs:
+#         return x + kwargs["suffix"]
+# print(combine_world("child"))
+# print(combine_world("child", prefix="man"))
+# print(combine_world("child", suffix="ish"))
+# print(combine_world("work", suffix="er"))
+# print(combine_world("work", prefix="home"))
+
+# 3 不會
+# def count_sevens(*args):
+#     return args.count(7)
+# num = [90, 1, 35, 67, 89, 20, 3, 1, 2, 3, 4, 5, 6, 9, 34, 46, 57, 68, 79, 12, 23, 34, 55, 1, 90, 454, 34, 76, 8,23,34,45,56,67,78,12,23,34,45,56,67,768,23,4,5,6,7,8,9,12,34,14,15,16,17,11,7,11,8,4,6,2,5,8,7,10,12,13,14,15,7,8,77,345,23,54,56,67,1,7,3,6,7,2,3,4,5,6,7,8,9,8,7,6,5,4,3,2,1,2,3,4,5,6,7,8,9,0,9,8,7,6,5,4,3,2,1,7]
+# result1 = count_sevens(1, 4, 7)
+# result2 = count_sevens(tuple(num))
+# print(result1)
+# print(result2)
+
+# 4
+# def calculate(**kwargs):
+#     if kwargs["make_float"] == True:
+#         if kwargs["operation"] == "add":
+#              return float(kwargs["first"] + kwargs["second"])
+#         elif kwargs["operation"] == "divide":
+#              return  float(kwargs["first"]/kwargs["second"])
+#     elif kwargs["make_float"] == False:
+#         if kwargs["operation"] == "add":
+#              return int(kwargs["first"] + kwargs["second"])
+#         elif kwargs["operation"] == "divide":
+#              return int(kwargs["first"]/kwargs["second"])
+# print(calculate(make_float=False, operation="add", messege="You just added", first=2, second=4))
+# print(calculate(make_float=True, operation="divide", first=3.5, second=5))
+
+
+
+
+
+
+
 
 
 
