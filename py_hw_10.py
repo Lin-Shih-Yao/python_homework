@@ -222,9 +222,63 @@
 # print(calculate(make_float=False, operation="add", messege="You just added", first=2, second=4))
 # print(calculate(make_float=True, operation="divide", first=3.5, second=5))
 
+# Lambdas
+# Q1
+cube = lambda x: x * x * x
+print(cube(2))
+print(cube(3))
+print(cube(8))
 
+# Q2
+decrement_list = lambda x : [ y - 1 for y in x] 
+print(decrement_list([1,2,3,4]))
+print(decrement_list([20,14,11]))
 
+# Q3
+remove_negetive = lambda x : [y for y in x if y >= 0]
+print(remove_negetive([-1,3,4,-99]))
+print(remove_negetive([-7,0,1,2,3,4,5]))
+print(remove_negetive([50,60,70]))
 
+# Q4
+is_all_strings = lambda x : [False if False in[True if type(y) is str else False for y in x] else True]
+print(is_all_strings(["a", "b", "c"]))
+print(is_all_strings([2,"a", "b", "c"]))
+print(is_all_strings(["hello", "goodbye"]))
+
+# Q5
+extremes = lambda x : sorted(x)[0:1] + sorted(x)[-1:]
+# extremes =  lambda x : [min(x), max(x)] #solution 2
+print(extremes([1,2,3,4,5]))
+print(extremes([99,25,30,71]))
+print(extremes("alcatraz"))
+
+# Q6
+max_magnitude = lambda x : max([abs(y) for y in x ])
+print(max_magnitude([300,20,-900]))
+print(max_magnitude([10,11,12]))
+print(max_magnitude([-5,-1,-89]))
+
+# Q7 不會
+sum_even_value = lambda x : sum([y for y in x if y % 2 == 0])
+print(sum_even_value([1,2,3,4,5,6]))
+print(sum_even_value([4,2,1,10]))
+#print(sum_even_value(1)) #error
+
+# Q8
+sum_floats = lambda x : sum([y for y in x if type(y) == float]) 
+print(sum_floats([1.5, 2.4, "awesome", [], 1]))
+print(sum_floats([1,2,3,4,5]))
+
+# Q9
+triple_and_filter = lambda x : [y*3 for y in x if y % 4 == 0]
+print(triple_and_filter([1,2,3,4]))
+print(triple_and_filter([6,8,10,12]))
+
+# Q10
+extract_full_name = lambda x : [' '.join([y["first"] for y in x]), ' '.join([z["last"] for z in x ])]
+names = [{"first": "Elie", "last": "Schoppik"}, {"first": "Colt", "last": "Steele"}]
+print(extract_full_name(names))
 
 
 
