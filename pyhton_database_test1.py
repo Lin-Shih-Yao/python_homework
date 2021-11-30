@@ -3,8 +3,8 @@ from flask import request
 from flask.templating import render_template
 import mysql.connector
 from webbrowser import open
-a = input()
-b = input()
+a = input("ENTER USERNAME: ")
+b = input("ENTER PASSWORD: ")
 sysdb = mysql.connector.connect(
     host = "localhost",
     database = "class",
