@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員專區</title>
+
+    <style>
+        header {
+            display: block;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            color: #ffffff;
+            font-size: 2em;
+            font-weight: bold;
+            background-color: #e01515;
+        }
+        
+        #signup {
+            display: inline-block;
+            margin: 25px;
+            height: 200px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+        
+        #signin {
+            display: inline-block;
+            margin: 25px;
+            height: 200px;
+            width: 300px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+        
+        #facebook {
+            display: block;
+            margin: 5px;
+            height: 10px;
+            text-align: center;
+            font-size: 1em;
+        }
+        
+        form {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>歡迎光臨，請註冊登入系統</header>
+
+    <span id="signup">
+        <div>註冊帳號</div>
+        <form action="http://127.0.0.1:3000/signup" method="POST">
+            <div>姓名 <input type="text" name="user" ></div>
+            <div>帳號 <input type="text" name="username"></div>
+            <div>密碼 <input type="password" name="password"></div>
+            <button>註冊</button>
+        </form>
+    </span>
+
+    <span id="signin">
+        <div>登入系統</div>
+        <form action="http://127.0.0.1:3000/signin" method="POST">
+            <div>帳號 <input type="text" name="username"></div>
+            <div>密碼 <input type="password" name="password"></div>
+            <button>登入</button>
+        </form>
+    </span>
+
+    <div id="facebook">
+        <button>使用facebook帳號登入</button>
+    </div>
+
+</body>
+
+</html>
